@@ -130,12 +130,11 @@ sub search {
 }
 
 sub _trigrams {
+    my $word = "  $_[1]  ";
+
     return map {
-        /(...)/g
-    }
-        map {
-            substr "  $_[1]  ", $_
-        } 0 .. 2;
+        substr $word, $_, 3
+    } 0 .. length($word) - 3;
 }
 
 =head1 SEE ALSO
