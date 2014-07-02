@@ -24,6 +24,10 @@ test_requires 'Test::Deep'            => '0.103';
 test_requires 'FindBin'               => 0;
 test_requires 'Path::Class'           => '0.16';
 
+author_requires 'Guard'               => '1.022';
+author_requires 'IO::Capture::Stderr' => 0;
+author_requires 'IO::Capture::Stdout' => 0;
+author_requires 'Test::Benchmark'     => '0.04';
 author_requires 'Test::Pod'           => '1.22';
 author_requires 'Test::Pod::Coverage' => '1.08';
 author_requires 'Pod::Coverage'       => '0.18';
