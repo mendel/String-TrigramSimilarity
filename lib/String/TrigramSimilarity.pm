@@ -61,11 +61,13 @@ has warp => (
 
 has _words_by_trigram => (
     is          => 'rw',
+    isa         => sub { ref $_ eq 'HASH' },
     default     => sub { +{} },
 );
 
 has _num_trigrams_of_word => (
     is          => 'rw',
+    isa         => sub { ref $_ eq 'HASH' },
     default     => sub { +{} },
 );
 
