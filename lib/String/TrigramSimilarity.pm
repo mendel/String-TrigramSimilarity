@@ -1,8 +1,12 @@
 package String::TrigramSimilarity;
 
 # missing features:
-#  * imitating String::Trigram behaviour when encountering repeated trigrams or doing it properly
-#  * n-grams ?
+# * dump/restore of the matching data structure (using nstore) for fast startup times
+# * optionally checking if the word list does not contain repetitions - repetitions means that word has twice/thrice/... weight in the matching as others
+# * imitating String::Trigram behaviour when encountering repeated trigrams or doing it properly ?
+# * storing user data along with the word (so that the user does not have to keep a word -> user data mapping in an own hash (advantage: the words do not have to be stored twice in memory)
+# * n-grams ?
+# * assigning weight to each word so that they are preferred to other words with a greater similarity ?
 # features that may or may not be implemented - they may ruin performance:
 #  * any mangling of the base or the string to be matched
 #   * these should be done by the user (eg. in a wrapper lib), otherwise the extra check for the param takes precious time if not used - or maybe by using function pointers to different ->_trigrams() implementations (or using code generation)
